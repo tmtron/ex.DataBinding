@@ -22,6 +22,10 @@ android {
         enabled=true
     }
 }
+project.tasks.withType(JavaCompile).all {
+    it.aptOptions.processors += 'android.databinding.annotationprocessor.ProcessDataBinding'
+}
+
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
