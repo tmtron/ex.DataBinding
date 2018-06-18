@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'net.ltgt.apt-idea'
 
 android {
     compileSdkVersion 27
