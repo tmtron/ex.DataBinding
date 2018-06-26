@@ -13,8 +13,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-        LibClass tmp = new LibClass("test from lib");
+        bind(binding);
+    }
 
+    private void bind(final ActivityMainBinding binding) {
+        LibClass tmp = new LibClass("test from lib");
         binding.tvMain.setText(tmp.getValue());
     }
 }
