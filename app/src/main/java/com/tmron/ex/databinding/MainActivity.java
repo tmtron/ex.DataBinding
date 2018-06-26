@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.tmron.ex.databinding.databinding.ActivityMainBinding;
+import com.tmron.lib.LibClass;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -12,6 +13,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-        binding.tvMain.setText("gradle-apt-plugin");
+        LibClass tmp = new LibClass("test from lib");
+
+        binding.tvMain.setText(tmp.getValue());
     }
 }
